@@ -1,6 +1,7 @@
 # **Novel Class Discovery for 3D Point Cloud Semantic Segmentation [CVPR 2023]**
 The official implementation of our work "Novel Class Discovery for 3D Point Cloud Semantic Segmentation".
 
+![teaser](assets/NOPS_teaser.jpg)
 
 ## Introduction
 Novel class discovery (NCD) for semantic segmentation is the problem of learning a model that is capable of segmenting unlabelled (novel) classes by using only the supervision from labelled (base) classes.
