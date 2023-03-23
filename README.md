@@ -14,4 +14,67 @@ Thirdly, we present a new method for NCD based on online clustering that exploit
 Lastly, we introduce a new evaluation protocol to assess the performance of NCD for point cloud semantic segmentation.
 We thoroughly evaluate our method on SemanticKITTI and SemanticPOSS datasets, showing that it can significantly outperform the baseline.
 
-Camera ready and code will be released soon!
+:fire: For more information have a look at our [PAPER](https://arxiv.org/pdf/2303.11610)! :fire:
+
+Authors: 
+        Luigi Riz,
+        [Cristiano Saltori](https://scholar.google.com/citations?user=PID7Z4oAAAAJ&hl),
+        [Elisa Ricci](https://scholar.google.ca/citations?user=xf1T870AAAAJ&hl),
+        [Fabio Poiesi](https://scholar.google.co.uk/citations?user=BQ7li6AAAAAJ&hl)
+
+## News :new:
+- 3/2023: NOPS code is **OUT**!:fire:
+- 3/2023: NOPS is accepted to CVPR 2023!:fire: Our work is the first allowing the segmentation of known and unknown classes in 3D Lidar scans!
+
+## Installation
+
+The code has been tested with Python 3.8, CUDA 11.3, pytorch 1.10.1 and pytorch-lighting 1.4.8. Any other version may require to update the code for compatibility.
+
+### Conda
+To run the code, you need to install:
+- [Pytorch 1.10.1](https://pytorch.org/get-started/previous-versions/)
+- [Minkowski Engine](https://github.com/NVIDIA/MinkowskiEngine)
+- [Pytorch-Lighting 1.4.8](https://www.pytorchlightning.ai) (be sure to install torchmetrics=0.7.2)
+- [Scipy 1.7.3](https://scipy.org/install/)
+- [Wandb](https://docs.wandb.ai/quickstart)
+
+## Data preparation
+To download the data follow the instructions provided by [SemanticKITTI](http://www.semantic-kitti.org) and [SemanticPOSS](http://www.poss.pku.edu.cn/semanticposs.html). Then, use this structure of the folders:
+```
+./
+├── 
+├── ...
+└── path_to_data_shown_in_yaml_config/
+      └── sequences
+            ├── 00/           
+            │   ├── velodyne/	
+            |   |	   ├── 000000.bin
+            |   |	   ├── 000001.bin
+            |   |	   └── ...
+            │   └── labels/ 
+            |          ├── 000000.label
+            |          ├── 000001.label
+            |          └── ...
+            └── ...
+```
+
+## Commands
+### Pretraining
+To run the pretraining:
+```
+python main_pretrain.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]
+```
+For additional command line arguments, run:
+```
+python main_pretrain.py -h
+```
+
+### Discovery
+To run the discovery step (pretraining is not mandatory):
+```
+python main_discover.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]
+```
+For additional command line arguments, run:
+```
+python main_discover.py -h
+```
