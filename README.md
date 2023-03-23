@@ -98,4 +98,4 @@ This project has received funding from the European Union’s Horizon Europe res
 This work was also partially supported by the PRIN project LEGO-AI (Prot. 2020TA3K9N), the EU ISFP PROTECTOR (101034216) project and the EU H2020 MARVEL (957337) project and, it was carried out in the Vision and Learning joint laboratory of Fondazione Bruno Kessler and UNITN.
 
 ## TODOS :soon:
-- Add code for $\text{EUMS}^\dag$
+- Add code for $\text{EUMS}^\dagger$
