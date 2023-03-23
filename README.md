@@ -78,3 +78,24 @@ For additional command line arguments, run:
 ```
 python main_discover.py -h
 ```
+
+## Citing our work
+
+Please cite the following paper if you use our code:
+
+```latex
+@inproceedings{Riz2023,
+  title = {Novel Class Discovery for 3D Point Cloud Semantic Segmentation},
+  author = {Riz, Luigi and Saltori, Cristiano and Ricci, Elisa and Poiesi, Fabio},
+  booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year = {(early access) 2023}
+}
+```
+
+## Acknowledgements
+
+This project has received funding from the European Union’s Horizon Europe research and innovation programme under grant agreement No 101058589.
+This work was also partially supported by the PRIN project LEGO-AI (Prot. 2020TA3K9N), the EU ISFP PROTECTOR (101034216) project and the EU H2020 MARVEL (957337) project and, it was carried out in the Vision and Learning joint laboratory of Fondazione Bruno Kessler and UNITN.
+
+## TODOS :soon:
+- Add code for $\text{EUMS}^\dag$
