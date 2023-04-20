@@ -17,7 +17,7 @@ We thoroughly evaluate our method on SemanticKITTI and SemanticPOSS datasets, sh
 :fire: For more information have a look at our [PAPER](https://arxiv.org/pdf/2303.11610)! :fire:
 
 Authors: 
-        Luigi Riz,
+        [Luigi Riz](https://scholar.google.com/citations?user=djO2pVUAAAAJ&hl),
         [Cristiano Saltori](https://scholar.google.com/citations?user=PID7Z4oAAAAJ&hl),
         [Elisa Ricci](https://scholar.google.ca/citations?user=xf1T870AAAAJ&hl),
         [Fabio Poiesi](https://scholar.google.co.uk/citations?user=BQ7li6AAAAAJ&hl)
@@ -77,6 +77,13 @@ python main_discover.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI
 For additional command line arguments, run:
 ```
 python main_discover.py -h
+```
+To reproduce the paper results run:
+```
+python main_discover.py -s [SPLIT NUMBER] --dataset SemanticPOSS --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.3
+```
+```
+python main_discover.py -s [SPLIT NUMBER] --dataset SemanticKITTI --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.5
 ```
 
 ## Citing our work
