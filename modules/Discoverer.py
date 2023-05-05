@@ -249,7 +249,7 @@ class Discoverer(pl.LightningModule):
 
                 if (un_idx_tmp.sum() * p).int() > 0:
                     # select confident novel pts
-                    un_conf = preds[un_idx_tmp].softmax(-1)[:, un_tmp]
+                    un_conf = preds[un_idx_tmp][:, un_tmp]
                     un_sel_tmp = indexes[un_idx_tmp]
 
                     # sort them
