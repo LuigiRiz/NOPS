@@ -86,17 +86,25 @@ python main_discover.py -s [SPLIT NUMBER] --dataset SemanticPOSS --dataset_confi
 python main_discover.py -s [SPLIT NUMBER] --dataset SemanticKITTI --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.5
 ```
 
+To test with a checkpoint, run:
+```
+python main_discover_test.py -s [SPLIT NUMBER] --checkpoint=[PATH TO LIGHTNING CHECKPOINT]
+```
+
 ## Citing our work
 
 Please cite the following paper if you use our code:
 
 ```latex
-@inproceedings{Riz2023,
-  title = {Novel Class Discovery for 3D Point Cloud Semantic Segmentation},
-  author = {Riz, Luigi and Saltori, Cristiano and Ricci, Elisa and Poiesi, Fabio},
-  booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year = {(early access) 2023}
-}
+@inproceedings{riz2023novel,
+  author={Riz, Luigi and Saltori, Cristiano and Ricci, Elisa and Poiesi, Fabio},
+  booktitle={2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 
+  title={Novel Class Discovery for 3D Point Cloud Semantic Segmentation}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={9393-9402},
+  doi={10.1109/CVPR52729.2023.00906}}
 ```
 
 ## Acknowledgements
